@@ -61,5 +61,6 @@ runs:
             args+=(--skip-packaging "${{ inputs.skip_packaging }}")
         fi
 
+        echo "$GITHUB_ACTION_PATH/cr.sh" "${args[@]}"
         "$GITHUB_ACTION_PATH/cr.sh" "${args[@]}"
       shell: bash
